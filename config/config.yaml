@@ -1,0 +1,8 @@
+llm: # Config always addressed as Key and value
+
+  openai:
+    provider: 'openai'
+    model: 'o4-mini'
+  groq:
+    provider: 'groq'
+    model: 'DeepSeek-R1-Distill-Llama-70B'

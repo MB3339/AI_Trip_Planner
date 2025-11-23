@@ -22,7 +22,7 @@ An AI-powered trip planning application that creates personalized travel itinera
 
 ## 🚀 Demo
 
-![WanderMind AI Demo](demo_screenshot.png)
+![WanderMind AI Demo] demo_screenshot.png
 
 ## 🛠️ Tech Stack
 

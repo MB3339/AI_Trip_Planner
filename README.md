@@ -189,8 +189,8 @@ This project is licensed under the MIT License.
 ## 👨‍💻 Author
 
 **Your Name**
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- GitHub: [@yourusername](https://github.com/yourusername)
+- LinkedIn: [Meet P Bhatt](https://www.linkedin.com/in/meet-p-bhatt/)
+- GitHub: [MB3339](https://github.com/MB3339)
 
 ## 🙏 Acknowledgments
 

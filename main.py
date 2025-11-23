@@ -33,7 +33,7 @@ async def query_travel_agent(payload: QueryRequest):   # rename param to avoid q
         logger.info("Received question: %s", payload.query)
 
         # Build your agent graph
-        graph = GraphBuilder(model="groq")
+        graph = GraphBuilder(model_provider="groq")
         agent_app = graph()
 
         # Optional: export the graph image (non-fatal if it fails)

@@ -1,6 +1,6 @@
 import requests
 
-class WeatherForecast:
+class WeatherForecastTool:
     def __init__(self, api_key):
         self.api_key = api_key
         self.base_url = "http://api.openweathermap.org/data/2.5"

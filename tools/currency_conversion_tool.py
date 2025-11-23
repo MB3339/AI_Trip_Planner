@@ -1,13 +1,11 @@
+import os
 from utils.currency_convertor import CurrencyConvertor
 from typing import List
-from langchain.tools import tool
+from langchain_core.tools import tool
 from dotenv import load_dotenv
-load_dotenv()
 
 
-
-
-class CurrencyConvertorTool:
+class CurrencyConverterTool:
     def __init__(self):
         load_dotenv()
         self.api_key=os.getenv("EXCHANGE_RATE_API_KEY")
@@ -21,4 +19,4 @@ class CurrencyConvertorTool:
         def convert_currency(amount:float,from_currency:str,to_currency:str)->float:
             """ convert the amount from one currency to another""" 
             return self.currency_service.convert(amount,from_currency,to_currency)
-        return [convert_currency]   
+        return [convert_currency]

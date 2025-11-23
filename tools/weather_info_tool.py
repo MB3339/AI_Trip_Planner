@@ -2,9 +2,9 @@ import os
 from dotenv import load_dotenv
 from typing import Any, Dict, Optional, List
 from utils.weather_info import WeatherForecastTool
-from langchain_tools import Tool  
+from langchain_core.tools import tool
 
-class WeatherInfoTool(Tool):
+class WeatherInfoTool:
    
     def __init__(self):
         load_dotenv()
@@ -16,7 +16,7 @@ class WeatherInfoTool(Tool):
 
     def _setup_tools(self) -> List:
         """ Setup all tools for weather information retrieval. """
-        @Tool
+        @tool
         def get_current_weather(city:str)   -> str:
             "Get current weather for a city"
             weather_data = self.weather_service.get_current_weather(city)
@@ -28,8 +28,7 @@ class WeatherInfoTool(Tool):
             return f"Could not retrieve weather data for {city}."
 
 
-        @Tool
-
+        @tool
         def get_weather_forecast(city:str, days:int=3) -> str:
             "Get weather forecast for a city for the next 'days' days"
             forecast_data = self.weather_service.get_weather_forecast(city, days)
@@ -43,3 +42,5 @@ class WeatherInfoTool(Tool):
                     forecasts.append(f"{date}: {temp}°C, {desc}")
                 return f"Weather forecast for {city}:\n" + "\n".join(forecasts)
             return f"Could not retrieve weather forecast for {city}."
+        
+        return [get_current_weather, get_weather_forecast]
